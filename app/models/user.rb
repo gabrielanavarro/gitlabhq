@@ -118,7 +118,7 @@ class User < ActiveRecord::Base
   # Validations
   #
   validates :name, presence: true
-  validates :email, presence: true, email: { strict_mode: true }, uniqueness: true
+  validates :email, presence: true, email: {strict_mode: true}
   validates :notification_email, presence: true, email: { strict_mode: true }
   validates :bio, length: { maximum: 255 }, allow_blank: true
   validates :projects_limit, presence: true, numericality: { greater_than_or_equal_to: 0 }
